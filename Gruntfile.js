@@ -43,6 +43,9 @@ module.exports = function(grunt) {
 			},
 
 			all: {
+				options: {
+					only: '<%= grunt.option("file") && "More/" + grunt.option("file") %>'
+				},
 				src: ['node_modules/mootools-core/Source/**/*.js', 'Source/**/*.js'],
 				dest: 'mootools-more-all.js'
 			},
